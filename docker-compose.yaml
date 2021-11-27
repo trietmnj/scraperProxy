@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  go-vicscraper:
+    container_name: GOVICS_DEV
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    ports:
+      - 3031:3031
+    volumes:
+      - .:/workspaces/scraperProxy
+    # env_file:
+    #   - .devcontainer/dev.env
+    working_dir: /workspaces/scraperProxy
+    tty: true
+    entrypoint: ["bash"]
