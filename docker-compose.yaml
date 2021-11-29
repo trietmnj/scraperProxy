@@ -1,7 +1,7 @@
 version: "3.9"
 services:
-  go-vicscraper:
-    container_name: GOVICS_DEV
+  scraper-proxy:
+    container_name: SCRAPERPROXY_DEV
     build:
       context: .
       dockerfile: dev.Dockerfile
