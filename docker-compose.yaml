@@ -9,8 +9,8 @@ services:
       - 3031:3031
     volumes:
       - .:/workspaces/scraperProxy
-    # env_file:
-    #   - .devcontainer/dev.env
+    env_file:
+      - .devcontainer/dev.env
     working_dir: /workspaces/scraperProxy
     tty: true
     entrypoint: ["bash"]
